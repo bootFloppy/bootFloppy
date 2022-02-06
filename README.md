@@ -13,3 +13,5 @@ Dont Trust Me On Writing Essays.
 ### ON PAUSE
 
 [ PixelNetNeon/VanillaExtract ]
+
+![workflow badge](https://github.com/PixelNetNeon)
