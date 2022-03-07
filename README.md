@@ -4,7 +4,7 @@ Dont Trust Me On Writing Essays.
 
 ### CURRENT PROJECTS
 
-[ SMXNoob/FNF-Modmaking ](https://github.com/SMXNoob/FNF-Modmaking)
+[ PixelNetNeon/Friday-Night-Funkin-CasualVibing ](https://github.com/PixelNetNeon/Friday-Night-Funkin-CasualVibing)
 
 ### STUFF I MADE
 
@@ -12,6 +12,7 @@ Dont Trust Me On Writing Essays.
 
 ### ON PAUSE
 
+[ SMXNoob/FNF-Modmaking ](https://github.com/SMXNoob/FNF-Modmaking)
 [ PixelNetNeon/VanillaExtract ]
 
 ![workflow badge](https://github.com/PixelNetNeon)
