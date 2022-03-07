@@ -14,6 +14,6 @@ Dont Trust Me On Writing Essays.
 
 [ SMXNoob/FNF-Modmaking ](https://github.com/SMXNoob/FNF-Modmaking)
 
-[ PixelNetNeon/VanillaExtract ]
+[ PixelNetNeon/VanillaExtract ](https://github.com/PixelNetNeon/VanillaExtract)
 
 ![workflow badge](https://github.com/PixelNetNeon)
