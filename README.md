@@ -1,5 +1,5 @@
 # Heya! Im Neon.
-Oh, Hey! I'm That Person Who Made NeonTools. (with messy code lmao)
+Oh, Hey! I'm That Person Who Made NeonTools. (with some messy code lmao)
 
 # Current Projects
 <p align="left">
