@@ -2,8 +2,8 @@
 
 # Projects
 *Listed By Category*
-<details>
-<summary>🖌️Design</summary>
-<br>
-None <i>that is publicly listed</i> Yet!
+<details><summary>🖌️Design</summary>
+  
+None Yet! *(that is public)*
+
 </details>
