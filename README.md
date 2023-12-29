@@ -2,8 +2,8 @@
 
 # Projects
 *Listed By Category*
-<details><summary>🖌️Design</summary>
+<details><summary>Placeholder</summary>
   
-None Yet! *(that is public)*
+*yes this is a placeholder.*
 
 </details>
