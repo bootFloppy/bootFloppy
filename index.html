@@ -1,19 +1,71 @@
-<!DOCTYPE html>
-
 <html>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>TESTING!</title>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/7.css" />
 
-    <meta content="(PixelNet)Neon's Page" property="og:title" />
-    <meta content="PixelNetNeon's Personal Webpage Hosted Via GitHub Pages" property="og:description" />
-    <meta content="http://github.pixelnetneon.com" property="og:url" />
-    <meta content="#74c7ec" data-react-helmet="true" name="theme-color" />
-  </head>
-  <body>
-    <h1 align="center">
-      <img src="../Files/PNG/Logo.png" width="20%">
-    </h1>
-    <p align="center">remind me to work on this website more (ime lazy)</p>
-  </body>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+        <script>
+            window.onload = function() {      
+                twemoji.parse(document.body, 
+                        {folder: 'svg', ext: '.svg'}
+                );
+            }
+
+            var textArray = [
+                'Now with more Windows 7!',
+                'Also try Kitten Burst!',
+                'this weirdly reminds me of Minecraft splash text.'
+            ];
+            var randomString = Math.floor(Math.random()*textArray.length);
+    
+            document.title = "Neon's Site - " + textArray[randomString]
+        </script>
+
+        <style>
+            img.emoji {
+            width:1.5em;
+            pointer-events: none;
+        }
+
+            body {
+                background-image: url(./Images/background.jpg);
+                background-size: cover;
+            }
+
+            .info {
+                position: absolute;
+                top: 30%;
+                right: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="window glass active info" style="width: 350px">
+            <div class="title-bar">
+              <div class="title-bar-text">About</div>
+            </div>
+            <div class="window-body has-space">
+                <menu role="tablist" aria-label="Window with Tabs">
+                    <button role="tab" aria-controls="neon" aria-selected="true">@pixelnetneon</button>
+                    <button role="tab" aria-controls="bismuth">@bismuthneon</button>
+                </menu>
+                <article role="tabpanel" id="neon">
+                    Heya, I'm Neon. Welcome to my website!<div></div>
+                    To the left, it should <s>show you my projects.</s> (not yet but planned)
+                    <div>
+                        <details>
+                            <summary>Social Media Stuffs.</summary>
+                            <ul>
+                                <li><button onclick="window.open('https://twitter.com/PixelNetNeon','_blank')"> <img height="14" width="14" src="https://unpkg.com/simple-icons@v11/icons/twitter.svg" /> Twitter</button></li>
+                            </ul>
+                        </details>
+                    </div> 
+                </article>
+                <article role="tabpanel" hidden id="bismuth">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=p7YXXieghto','_blank')" type="button">don't</button>
+                </article>
+            </div>
+          </div>
+
+        <script src="./JS/script.js"></script>
+    </body>
 </html>
