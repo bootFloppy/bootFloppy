@@ -17,28 +17,28 @@ function tabHandler(e, tabButtons) {
 }
 
 // Tabs > Sample Tabs
-const tabList = document.querySelector("[aria-label='Sample Tabs']");
-const tabButtons = tabList.querySelectorAll("[role=tab]");
-tabButtons.forEach((tabButton) =>
-  tabButton.addEventListener("mousedown", (evt) => {
-    tabHandler(evt, tabButtons)
-  }));
-tabButtons.forEach((tabButton) =>
-  tabButton.addEventListener("focus", (evt) => {
-    tabHandler(evt, tabButtons)
-  }));
+//const tabList = document.querySelector("[aria-label='Sample Tabs']");
+//const tabButtons = tabList.querySelectorAll("[role=tab]");
+//tabButtons.forEach((tabButton) =>
+//  tabButton.addEventListener("mousedown", (evt) => {
+//    tabHandler(evt, tabButtons)
+//  }));
+//tabButtons.forEach((tabButton) =>
+//  tabButton.addEventListener("focus", (evt) => {
+//    tabHandler(evt, tabButtons)
+//  }));
 
-// Tabs > Tabs Template
-const templateTabList = document.querySelector("[aria-label='Tabs Template']");
-const templateTabButtons = templateTabList.querySelectorAll("[role=tab]");
-templateTabButtons.forEach((tabButton) =>
-  tabButton.addEventListener("mousedown", (evt) => {
-    tabHandler(evt, templateTabButtons)
-  }));
-templateTabButtons.forEach((tabButton) =>
-  tabButton.addEventListener("focus", (evt) => {
-    tabHandler(evt, templateTabButtons)
-  }));
+// Tabs > Tabs Template [brokey]
+//const templateTabList = document.querySelector("[aria-label='Tabs Template']");
+//const templateTabButtons = templateTabList.querySelectorAll("[role=tab]");
+//templateTabButtons.forEach((tabButton) =>
+//  tabButton.addEventListener("mousedown", (evt) => {
+//    tabHandler(evt, templateTabButtons)
+//  }));
+//templateTabButtons.forEach((tabButton) =>
+//  tabButton.addEventListener("focus", (evt) => {
+//    tabHandler(evt, templateTabButtons)
+//  }));
 
 // Window Body > Window with Tabs
 const windowTabList = document.querySelector("[aria-label='Window with Tabs']");
