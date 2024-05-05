@@ -4,9 +4,9 @@
 # Main Projects
 *"aka the stuff i might work on more"*
 
-
-[SaturnNeon/vrDB](https://github.com/SaturnNeon/vrDB)
+* [SaturnNeon/vrDB](https://github.com/SaturnNeon/vrDB)
 # Mini Projects
 *"(the stuff that i might work on when bored or something...)"*
 
-SaturnNeon/tuicord (not open-source and never finished... maybe)
+* SaturnNeon/tuicord (not open-source and never finished... maybe)
+* [SaturnNeon/batFetch](https://github.com/SaturnNeon/batFetch)
