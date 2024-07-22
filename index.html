@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SaturnNeon's Page</title>
-        <link rel="icon" type="image/x-icon" href="./Files/svg/saturn.svg">
-        <!-- Twemoji -->
-        <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
-
-        <script>
-            var textArray = [
-                'Now with more Windows 7!',
-                'Also try Kitten Burst!',
-                'this weirdly reminds me of Minecraft splash text.',
-                'https://youtu.be/y6BcERgn8Ig'
-            ];
-            var randomString = Math.floor(Math.random()*textArray.length);
-    
-            //document.title = "Neon's Site - " + textArray[randomString]
-        </script>
-
+        <title>bismuthCMYK</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-            :root {
+            body {
+                padding: 5px 5px 5px 5px;
+
                 font-family: "IBM Plex Mono", monospace;
+            }
+
+            .dark-mode {
                 background-color: #101010;
-                color: white;
+                color: #f0f0f0
             }
 
-            .CenterBox {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                /* Scale */
-                aspect-ratio: 1/0.6;
-                overflow-y:auto;
-                /* Deco */
-                background-color: rgb(10, 10, 10);
-                /* Padding */
-                padding-left: 1%;
-                padding-right: 1%;
+            a:link {
+                color: #f9e2af;
+                padding: 5px 5px 5px 5px;
             }
-
-            .link:link, .link:visited, .link:active {
-                text-decoration: none;
-                color: white;
-                padding-left: 1%;
+  
+            /* visited link */
+            a:visited {
+                color: #f9e2af;
             }
-
-            .link:hover {
-                background-color: rgb(0, 0, 0);
-                color: rgb(255, 255, 255);
-                filter: invert(1);
+  
+            /* mouse over link */
+            a:hover {
+              color: #11111b;
+              background-color: #f9e2af;
             }
-
-            .linkNoPadding:link, .linkNoPadding:visited, .linkNoPadding:active {
-                text-decoration: none;
-                color: white;
-            }
-
-            .linkNoPadding:hover {
-                background-color: rgb(0, 0, 0);
-                color: rgb(255, 255, 255);
-                filter: invert(1);
-            }
-
-            .seperate {
-                display: block;
-            }
-
-            .consolebg {
-                font-size: 100%;
+  
+            /* selected link */
+            a:active {
+                color: #f9e2af;
             }
         </style>
     </head>
-    <body>
-        <p id="fakeconsole" class="consolebg"></p>
-        <meta http-equiv="refresh" content="0; URL=https://www.youtube.com/watch?v=ogsW6ygWnhw" />
-        <script src="./JS/ConsoleCommands.js" type="text/javascript"></script>
+    <body class="dark-mode">
+        <div id="mydiv" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; padding: 15px 15px 15px 15px;">
+            <h1 id="mydivheader">bismuthCMYK</h1>
+            <a href="https://twitter.com/bismuthCMYK">Twitter</a>
+            <a href="https://twitter.com/bismuthCMYK">BlueSky</a>
+            <a href="https://discord.gg/dTPFpcdzfe">Discord</a>
+        </div>
+        
     </body>
+    <script>
+        dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+    </script>
 </html>
