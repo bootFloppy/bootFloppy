@@ -7,7 +7,6 @@
 
             body {
                 padding: 5px 5px 5px 5px;
-
                 font-family: "IBM Plex Mono", monospace;
             }
 
@@ -38,57 +37,60 @@
             }
         </style>
     </head>
-    <body class="dark-mode">
-        <div id="mydiv" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; padding: 15px 15px 15px 15px;">
-            <h1 id="mydivheader">bismuthCMYK</h1>
+    <body class="dark-mode" style="html, body {margin: 0; height: 100%; overflow: hidden}">
+        <div id="div1" style="position: absolute; top: 40%; left: 30%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; background-color: #101010; padding: 15px 15px 15px 15px;">
+            <h1>bismuthCMYK</h1>
             <a href="https://twitter.com/bismuthCMYK">Twitter</a>
-            <a href="https://bsky.app/profile/pixelnetneon.com">BlueSky</a>
+            <a href="https://twitter.com/bismuthCMYK">BlueSky</a>
             <a href="https://discord.gg/dTPFpcdzfe">Discord</a>
         </div>
-        
+        <div id="div2" style="position: absolute; top: 60%; left: 30%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; background-color: #101010; padding: 15px 15px 15px 15px;">
+          <h1>SaturnNeon</h1>
+          <a href="https://twitter.com/SaturnNeon">Twitter</a>
+          <a href="https://github.com/SaturnNeon">GitHub</a>
+      </div>
+      <div id="div3" style="position: absolute; width: 40%; height: 80%; top: 50%; left: 60%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; background-color: #101010; padding: 15px 15px 15px 15px;">
+        <h1>Projects</h1>
+    </div>
     </body>
     <script>
-        dragElement(document.getElementById("mydiv"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+       divs = document.getElementsByTagName("div");
+            for (div of divs) div.onmousedown = onMouseDown;
+            
+            document.onmousemove = onMouseMove;
+            document.onmouseup   = onMouseUp;
+            
+            
+            var the_moving_div = ''; 
+            var the_last_mouse_position = { x:0, y:0 };
+            
+            
+            function onMouseDown(e) {
+                e.preventDefault();
+                the_moving_div            = e.target.id;      // remember which div has been selected 
+                the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
+                the_last_mouse_position.y = e.clientY;
+            
+                var divs = document.getElementsByTagName("div");
+                e.target.style.zIndex = divs.length;          // put this div  on top
+                var i = 1; for (div of divs) if (div.id != the_moving_div) div.style.zIndex = i++;   // put all other divs behind the selected one
+            }
+            
+            function onMouseMove(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                var d = document.getElementById(the_moving_div);
+                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px";     // move the div by however much the mouse moved
+                d.style.top  = d.offsetTop  + e.clientY - the_last_mouse_position.y + "px";
+                the_last_mouse_position.x = e.clientX;                                          // remember where the mouse is now
+                the_last_mouse_position.y = e.clientY;
+                drawConnectors();
+            }
+            
+            function onMouseUp(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                the_moving_div = "";
+            }
     </script>
 </html>
