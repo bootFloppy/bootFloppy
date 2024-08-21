@@ -1,92 +1,13 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>bismuthCMYK</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-            body {
-                padding: 5px 5px 5px 5px;
-                font-family: "IBM Plex Mono", monospace;
-            }
-
-            .dark-mode {
+            :root {
                 background-color: #101010;
-                color: #f0f0f0
-            }
-
-            a:link {
-                color: #f9e2af;
-                padding: 5px 5px 5px 5px;
-            }
-  
-            /* visited link */
-            a:visited {
-                color: #f9e2af;
-            }
-  
-            /* mouse over link */
-            a:hover {
-              color: #11111b;
-              background-color: #f9e2af;
-            }
-  
-            /* selected link */
-            a:active {
-                color: #f9e2af;
+                color: #ffffff;
             }
         </style>
     </head>
-    <body class="dark-mode" style="html, body {margin: 0; height: 100%; overflow: hidden}">
-        <div id="div1" style="position: absolute; top: 40%; left: 30%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; background-color: #101010; padding: 15px 15px 15px 15px;">
-            <h1>bootFloppy</h1>
-            <a href="https://twitter.com/bootfloppydisk">Twitter</a>
-            <a href="https://bsky.app/profile/pixelnetneon.com">BlueSky</a>
-            <a href="https://discord.gg/dTPFpcdzfe">Discord</a>
-            <a href="https://github.com/bootFloppy">GitHub</a>
-        </div>
-      <div id="div2" style="position: absolute; width: 40%; height: 80%; top: 50%; left: 60%; transform: translate(-50%, -50%); border: 3px solid #f0f0f0; background-color: #101010; padding: 15px 15px 15px 15px;">
-        <h1>Projects</h1>
-    </div>
+    <body>
+        being redone, sorry!
     </body>
-    <script>
-       divs = document.getElementsByTagName("div");
-            for (div of divs) div.onmousedown = onMouseDown;
-            
-            document.onmousemove = onMouseMove;
-            document.onmouseup   = onMouseUp;
-            
-            
-            var the_moving_div = ''; 
-            var the_last_mouse_position = { x:0, y:0 };
-            
-            
-            function onMouseDown(e) {
-                e.preventDefault();
-                the_moving_div            = e.target.id;      // remember which div has been selected 
-                the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
-                the_last_mouse_position.y = e.clientY;
-            
-                var divs = document.getElementsByTagName("div");
-                e.target.style.zIndex = divs.length;          // put this div  on top
-                var i = 1; for (div of divs) if (div.id != the_moving_div) div.style.zIndex = i++;   // put all other divs behind the selected one
-            }
-            
-            function onMouseMove(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                var d = document.getElementById(the_moving_div);
-                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px";     // move the div by however much the mouse moved
-                d.style.top  = d.offsetTop  + e.clientY - the_last_mouse_position.y + "px";
-                the_last_mouse_position.x = e.clientX;                                          // remember where the mouse is now
-                the_last_mouse_position.y = e.clientY;
-                drawConnectors();
-            }
-            
-            function onMouseUp(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                the_moving_div = "";
-            }
-    </script>
 </html>
