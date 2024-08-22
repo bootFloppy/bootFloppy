@@ -1,13 +1,49 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Hyperlinks</title>
+        <link rel="icon" type="image/x-icon" href="Vector.svg">
+        <link rel="stylesheet" href="https://unpkg.com/98.css">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
             :root {
                 background-color: #101010;
                 color: #ffffff;
             }
+
+            a {
+                display: block;
+            }
         </style>
     </head>
     <body>
-        being redone, sorry!
+        <div id="window" class="window" style="width: 300px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">hyperlinks</div>
+              <div class="title-bar-controls">
+                <!--<button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>-->
+                <button aria-label="Close" onclick="document.getElementById('window').remove();"></button>
+              </div>
+            </div>
+            <div class="window-body">
+                social media
+                <a href="https://x.com/bootfloppydisk" target="_blank">├ Twitter</a>
+                <!--<a href="https://www.youtube.com/@bootfloppy" target="_blank">├ YouTube</a>
+                <a href="https://twitch.tv/bismuthcmyk" target="_blank">├ Twitch</a>-->
+                <a href="https://bsky.app/profile/pixelnetneon.com" target="_blank">└ BlueSky</a>
+                games
+                <a href="https://namemc.com/profile/4177474f-9b2e-40a1-93ff-5a05b1769cf6" target="_blank">├ Minecraft</a>
+                <a href="https://www.roblox.com/users/157988214/profile" target="_blank">├ Roblox</a>
+                <a href="https://steamcommunity.com/id/bootfloppy/" target="_blank">├ Steam</a>
+                <a href="https://vrchat.com/home/user/usr_50dba348-2c30-41e0-9c78-197c8d633d4a" target="_blank">└ VRChat</a>
+                other
+                <a href="https://discord.gg/jQhYCJ5n5q" target="_blank">├ Discord Server</a>
+                <a href="https://github.com/bootFloppy" target="_blank">└ GitHub</a>
+                this site
+                <a href="index.html" target="_blank">└ index.html</a>
+            </div>
+          </div>
     </body>
 </html>
