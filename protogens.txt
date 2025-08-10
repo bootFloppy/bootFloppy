@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-# https://x.com/bismuthCMYK/status/1816301176469491980
-User-agent: malware-proots
-Disallow: /
