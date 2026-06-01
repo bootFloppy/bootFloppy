@@ -1,91 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-      <meta content="bootFloppy's homepage" property="og:title">
-      <meta content="personal webpage of Bismuth." property="og:description">
-      <meta content="https://bootfloppy.neocities.org" property="og:url">
-        <link rel="stylesheet" href="https://unpkg.com/7.css">
+        <meta content="bootFloppy's homepage" property="og:title" />
+        <meta
+            content="personal webpage of Bismuth."
+            property="og:description"
+        />
+        <meta content="https://bootfloppy.neocities.org" property="og:url" />
+
         <title>Bismuth's Site</title>
-        <link rel="icon" type="image/x-icon" href="./Icon.svg">
+        <link rel="icon" type="image/x-icon" href="./Icon.svg" />
+
+        <link rel="stylesheet" href="https://unpkg.com/7.css" />
         <style>
+            @font-face {
+                font-family: 'Adwaita Sans';
+                font-style: normal;
+                font-display: swap;
+                font-weight: 700;
+                src: url(https://cdn.jsdelivr.net/fontsource/fonts/adwaita-sans@latest/latin-700-normal.woff2) format('woff2'),
+            }
+
             :root {
                 background-color: #202020;
             }
+
+            #info {
+                background-color: #202020;
+                color: #fefefe;
+            }
+
+            .window {
+                position: fixed;
+            }
+
+            a:link, a:visited, a:hover, a:active {
+                color: white;
+            }
         </style>
-        <link rel="stylesheet" href="https://mrgenie151.neocities.org/static/onionring/onionring.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/lib/xterm.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.min.css"
+        />
     </head>
     <body>
-      <div id='bittyring'>
-        <script type="text/javascript" src="https://mrgenie151.neocities.org/static/onionring/onionring-variables.js"></script>
-        <script type="text/javascript" src="https://mrgenie151.neocities.org/static/onionring/onionring-widget.js"></script>
-      </div>
-      
-    <div id='bittyring'>
-      <table>
-        <tbody>
-          <tr>
-            <td class="webring-prev">
-              <a href="https://protogen.chat/webring/bootfloppy.neocities.org/previous">< Prev</a>
-            </td>
-            <span>
-              <td class="webring-info">
-                Protogen Webring</br>
-                <a href="https://protogen.chat/webring">Index</a>
-              </span>
-            </td>
-            <td class="webring-next">
-              <a href="https://protogen.chat/webring/bootfloppy.neocities.org/next">Next ><a/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-      
-      </div>
-        <div class="window glass active" style="min-width: 400px; max-width: 400px; position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%">
-            <div class="title-bar">
-                <div class="title-bar-text">bootFloppy</div>
-            </div>
-            <div class="window-body has-space">
-                <section class="tabs">
-                    <menu role="tablist" aria-label="Tabs Template">
-                        <button role="tab" aria-controls="tab1" aria-selected="true">Intro</button>
-                        <button role="tab" aria-controls="tab2">Links</button>
-                        <button role="tab" aria-controls="tab3">webring info</button>
-                    </menu>
-                    <article role="tabpanel" id="tab1">
-                        <b>oh hey, welcome to my corner of the web</b></br>
-                        i grew up with windows 7 at an early age so this is why my page looks like this, best explaination i can give.</br></br>
-                        honestly i have no clue what to put here to welcome you (the visitor) but anyways welcome :]</br></br>
-                        I try and work on misc stuff i feel like working on tbh.</br></br>
+        <img src="logo.svg" style="position: fixed; bottom: 1em; width: 15%" />
+        <div style="position: fixed; bottom: 1em; right: 1em;">
+            <table style="background-color: #2c2538; color: #fff; font-size: 20px; font-weight: 800; border: 0px;"><tbody><tr>
+                <td>
+                    <a href="https://protogen.chat/webring/bootfloppy.neocities.org/previous">←</a>
+                </td>
+                <td style="text-align: center;">
+                    <a href="https://protogen.chat/webring/" style="font-family: 'Adwaita Sans'; font-size: 20px; color: white;">protogenring</a>
+                </td>
+                <td>
+                    <a href="https://protogen.chat/webring/bootfloppy.neocities.org/next">→</a>
+                </td>
+            </tr></tbody></table>
+        </div>
 
-                        website can be considered W.I.P. as i could add more stuff.
-                    </article>
-                    <article role="tabpanel" id="tab2" hidden>
-                        <b>links</b><br/>
-                        <b>--------</b><br/>
-                        <a href="https://www.youtube.com/@bootFloppy">youtube</a><br/>
-                        <a href="https://www.twitch.tv/bootFloppy">twitch</a><br/>
-                        <a href="https://bsky.app/profile/bootfloppy.neocities.org">bluesky</a><br/>
-                        <a href="https://x.com/bootfloppy_">twitter</a><br/>
-                        <a href="https://mastodon.social/@bootfloppy" rel="me">mastodon</a> (i barely use this)</br>
-                        <a href="https://www.tumblr.com/bootfloppyy">tumblr</a> (same for this)<br/><br/>
-                        <b>stuff where my projects go</b><br/>
-                        <b>--------</b><br/>
-                        <a href="https://github.com/bootFloppy">github</a><br/>
-                        <a href="https://discord.gg/Hx4F3fasCh">discord</a></br>
-                    </article>
-                    <article role="tabpanel" id="tab3" hidden>
-                    <b>My (janky) Attempts at implementing webrings on this page</b></br>
-                    <b>--------</b><br/>
-                    So you may notice I have <b>two</b> webrings at the top, they aren't implemented the greatest... but it works for now.</br>
-                    If i ever update this site with a new design I may figure out a way to properly make them fit in, but for now you get two boxes at the top of the site.</br></br>
-                    <i>because im lazy.</i></br></br>
-                    and yes both webring boxes share the same "bittyring" theming.
-                </section>
-                <section style="display: flex; justify-content: flex-end; gap: 6px"><button disabled>OK</button></section>
+        <div
+            class="window glass"
+            id="infowindow"
+            style="max-width: 500px; min-width: 500px; top: 20%; left: 20%"
+        >
+            <div class="title-bar glass">
+                <div class="title-bar-text">bootFloppy</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body" id="info">
+                <ul role="menubar" style="color: #222">
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        Socials
+                        <ul role="menu" style="width: 200px">
+                            <li role="menuitem" tabindex="0" aria-haspopup="true">
+                                Text-based
+                                <ul role="menu">
+                                    <li role="menuitem"><a href="https://bsky.app/profile/bootfloppy.neocities.org">Bluesky</a></li>
+                                    <li role="menuitem"><a href="https://mastodon.social/@bootfloppy">Mastodon</a></li>
+                                    <li role="menuitem"><a href="https://x.com/bootfloppy_">Twitter / X</a></li>
+                                    <li role="menuitem"><a href="https://www.tumblr.com/bootfloppyy">Tumblr</a></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem" tabindex="0" aria-haspopup="true">
+                                Video-based
+                                <ul role="menu">
+                                    <li role="menuitem"><a href="https://www.youtube.com/@bootfloppy">YouTube</a></li>
+                                    <li role="menuitem"><a href="https://www.twitch.tv/bootfloppy">Twitch</a></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem" tabindex="0" aria-haspopup="true">
+                                Gaming
+                                <ul role="menu">
+                                    <li role="menuitem"><a href="https://namemc.com/profile/bootfloppy.1">NameMC (Minecraft)</a></li>
+                                    <li role="menuitem"><a href="https://steamcommunity.com/id/bootfloppy/">Steam</a></li>
+                                    <li role="menuitem"><a href="https://www.roblox.com/users/157988214/profile">Roblox</a></li>
+                                    <li role="menuitem"><a href="https://vrchat.com/home/user/usr_50dba348-2c30-41e0-9c78-197c8d633d4a">VRChat</a></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem"><a href="https://discord.gg/Hx4F3fasCh">Discord Server</a></li>
+                        </ul>
+                    </li>
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        Projects
+                        <ul role="menu" style="width: 200px">
+                            <li role="menuitem"><a href="https://github.com/TankyuLinux">Tankyu Linux</a></li>
+                        </ul>
+                    </li>
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        Extra
+                        <ul role="menu">
+                            <li role="menuitem"><a href="javascript:alert('TBD');">Web Badges</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h1>Heya, i'm Bismuth.</h1>
+                <i>certified dumbass</i><br />
+                She/Her (perferred) or He/Him (assigned at birth), whichever one is fine.
+                <p>Welcome to my corner of the web, I do stuff (mostly on the internet,) I guess, like:</p>
+                <ul>
+                    <li>Programming</li>
+                    <li>Video Editing</li>
+                    <li>playing games</li>
+                    <li>shitposting</li>
+                    <li>Cooking</li>
+                    <li>Slowly working on my fursuit head over time.</li>
+                </ul>
+                <b>If you want to directly contact me for whatever reason</b> <i>(or play L4D2 together)</i>
+                <ul>
+                    <li>Discord: bootfloppy</li>
+                    <li>Fluxer: bootfloppy</li>
+                    <li>Signal: bootfloppy.01</li>
+                </ul>
             </div>
         </div>
+
+        <div class="window active glass" id="badges" style="min-width: 500px; max-width: 500px; top: 4em; left: 4em">
+            <div class="title-bar">
+                <div class="title-bar-text">Web Badges</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <b>bootfloppy web badge</b><br>
+                <img src="boot88x31.png"><br>
+                <b>other cool people i can think of</b><br>
+                <a href="https://hiijax.net"><img src="https://hiijax.net/buttons/hiijax.gif"></a>
+                <a href="https://darkworld.download/"><img src="https://darkworld.download/button.gif"</a>
+                <a href="https://protogen.chat"><img src="https://protogen.chat/buttons/protogen.gif"></a>
+            </div>
+        </div>
+
+        <div class="window glass" id="console" style="max-width: 800px; top: 20%; left: 50%">
+            <div class="title-bar">
+                <div class="title-bar-text">Command Prompt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body" id="terminal"></div>
+        </div>
+
+        <script src="drag.js"></script>
+        <script>
+            var term = new Terminal();
+            term.open(document.getElementById("terminal"));
+            term.write("tbd!!");
+
+            makeDraggable(document.querySelector("#infowindow"));
+            makeDraggable(document.querySelector("#console"));
+            makeDraggable(document.querySelector("#badges"));
+        </script>
     </body>
-    <script src="./tabs.js"></script>
 </html>
