@@ -64,7 +64,7 @@
         <div
             class="window glass"
             id="infowindow"
-            style="max-width: 500px; min-width: 500px; top: 20%; left: 20%"
+            style="max-width: 500px; min-width: 500px; top: 18em; left: 4em"
         >
             <div class="title-bar glass">
                 <div class="title-bar-text">bootFloppy</div>
@@ -93,6 +93,7 @@
                                 <ul role="menu">
                                     <li role="menuitem"><a href="https://www.youtube.com/@bootfloppy">YouTube</a></li>
                                     <li role="menuitem"><a href="https://www.twitch.tv/bootfloppy">Twitch</a></li>
+                                    <li role="menuitem"><a href="https://www.tiktok.com/@bootfloppy">TikTok</a></li>
                                 </ul>
                             </li>
                             <li role="menuitem" tabindex="0" aria-haspopup="true">
@@ -116,7 +117,8 @@
                     <li role="menuitem" tabindex="0" aria-haspopup="true">
                         Extra
                         <ul role="menu">
-                            <li role="menuitem"><a href="javascript:alert('TBD');">Web Badges</a></li>
+                            <li role="menuitem"><a href="./minimal.html">Minimal/Simple Page</a></li>
+                            <!-- <li role="menuitem"><a href="javascript:alert('TBD');">Web Badges</a></li>-->
                         </ul>
                     </li>
                 </ul>
@@ -145,21 +147,22 @@
             <div class="title-bar">
                 <div class="title-bar-text">Web Badges</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Close"></button>
+                    <button aria-label="Minimize" disabled></button>
+                    <button onclick="document.getElementById('badges').remove(); javascript:alert('Refresh the page if you want the badges back, will improve this later!');" aria-label="Close"></button>
                 </div>
             </div>
             <div class="window-body has-space">
-                <b>bootfloppy web badge</b><br>
-                <img src="boot88x31.png"><br>
-                <b>other cool people i can think of</b><br>
+                <b>bootfloppy web badge</b> (click to copy)<br>
+                <img src="boot88x31.png" onclick='navigator.clipboard.writeText(`<a href="https://bootfloppy.neocities.org"><img src="https://bootfloppy.neocities.org/boot88x31.png"></a>`)'>
+                <br>
+                <b>cool badges with links</b><br>
                 <a href="https://hiijax.net"><img src="https://hiijax.net/buttons/hiijax.gif"></a>
                 <a href="https://darkworld.download/"><img src="https://darkworld.download/button.gif"</a>
                 <a href="https://protogen.chat"><img src="https://protogen.chat/buttons/protogen.gif"></a>
             </div>
         </div>
 
-        <div class="window glass" id="console" style="max-width: 800px; top: 20%; left: 50%">
+        <div class="window glass" id="console" style="max-width: 800px; top: 4em; left: 57em">
             <div class="title-bar">
                 <div class="title-bar-text">Command Prompt</div>
                 <div class="title-bar-controls">
@@ -173,6 +176,10 @@
 
         <script src="drag.js"></script>
         <script>
+            const quotes = ["certified dumbass", "Remind yourself that overconfidence is a slow and insidious killer.", "Mart.... SLIDE!!!!"]
+            const rand = Math.floor(Math.random() * quotes.length)
+
+
             var term = new Terminal();
             term.open(document.getElementById("terminal"));
             term.write("tbd!!");
